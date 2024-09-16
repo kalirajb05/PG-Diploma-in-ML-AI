@@ -1,0 +1,124 @@
+
+version: "2.0"
+stories:
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: delhi
+  - slot_was_set:
+    - location: delhi
+  - action: action_check_location
+  - slot_was_set:
+    - location: delhi
+  - slot_was_set:
+    - location_found: found
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_price
+  - intent: restaurant_search
+    entities:
+    - price: between 250 to 500
+  - slot_was_set:
+    - price: between 250 to 500
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: delhi
+  - intent: affirm
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: delhi
+  - slot_was_set:
+    - location: delhi
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_price
+  - intent: restaurant_search
+    entities:
+    - price: between 250 to 500
+  - slot_was_set:
+    - price: between 250 to 500
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: delhi
+  - action: utter_ask_mail
+  - intent: restaurant_search
+    entities:
+    - email: kalirajb05@gmail.com
+  - slot_was_set:
+    - email: kalirajb05@gmail.com
+  - action: action_send_mail
+  - slot_was_set:
+    - email: kalirajb05@gmail.com
+  - intent: affirm
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: Erode
+  - slot_was_set:
+    - location: Erode
+  - action: action_check_location
+  - slot_was_set:
+    - location: null
+  - slot_was_set:
+    - location_found: tier3
+  - action: utter_foodie_not_working
+  - intent: restaurant_search
+    entities:
+    - location: coimbatore
+  - slot_was_set:
+    - location: coimbatore
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_price
+  - intent: restaurant_search
+    entities:
+    - price: between 250 to 500
+  - slot_was_set:
+    - price: between 250 to 500
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: coimbatore
+  - action: utter_ask_mail
+  - intent: restaurant_search
+    entities:
+    - email: kalirajb05@gmail.com
+  - slot_was_set:
+    - email: kalirajb05@gmail.com
+  - action: action_send_mail
+  - slot_was_set:
+    - email: kalirajb05@gmail.com
+  - intent: goodbye
+  - action: utter_greet
+  - action: utter_goodbye

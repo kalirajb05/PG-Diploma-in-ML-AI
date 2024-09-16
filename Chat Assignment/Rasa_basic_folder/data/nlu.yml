@@ -1,0 +1,27 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - Hi
+    - hi
+- intent: restaurant_search
+  examples: |
+    - Can you suggest some good restaurants?
+    - [delhi](location)
+    - [Chinese]{"entity": "cuisine", "value": "chinese"}
+    - [between 250 to 500](price)
+    - [kalirajb05@gmail.com](email)
+    - [Erode](location)
+    - [coimbatore](location)
+    - [Chinese]{"entity": "cuisine", "value": "chinese"}
+    - [between 250 to 500](price)
+    - [kalirajb05@gmail.com](email)
+- intent: affirm
+  examples: |
+    - Thanks
+- intent: goodbye
+  examples: |
+    - Bye
+- synonym: chinese
+  examples: |
+    - Chinese
